@@ -6,7 +6,7 @@ Modern features have gradually been added to G-Code over the past few decades. E
 
 This Windows 10 App is intended for engineers working with older machines that do not support modern G-Code or CAD/CAM software. It gives you modern G-Code features through a postprocessor. This means you write your G-Code slightly differently (using [Razor syntax](https://en.wikipedia.org/wiki/ASP.NET_Razor)), and press a button to generate the raw G-Code which can then be run on the machine.
 
-![alt text](ttps://cdn.jam-es.com/img/gcoderazor/screenshot1.PNG "G-Code Razor Screenshot")
+![G-Code Razor Screenshot](https://cdn.jam-es.com/img/gcoderazor/screenshot1.PNG)
 
 ## Download and Run
 
