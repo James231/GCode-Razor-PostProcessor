@@ -14,7 +14,7 @@ Requires Windows 10, 64-bit.
 
 1. Go to the [Github Releases Page](https://github.com/James231/GCode-Razor-PostProcessor/releases).
 
-2. Under the 'Assets' section, download the `.zip` file.
+2. Under the 'Assets' section, download the `GCode-Razor.zip` file.
 
 3. Unzip the file and save the contents somewhere. Double click on `GCodeRazor.exe` to run it.
 
@@ -86,6 +86,8 @@ G-Code Razor has a few customizable settings. You can change them by editing the
 ```
 
 The file should consist of valid [Json](https://www.w3schools.com/js/js_json_syntax.asp).
+
+Similarily the examples on the 'Examples' page can be modified by editing the `examples.json` file.
 
 ## C# and Razor
 
