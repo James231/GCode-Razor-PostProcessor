@@ -35,7 +35,7 @@ N10 G00 X0.2 Y0.707106781186547
 ```
 Or you can add rounding with:
 ```gcode
-N10 G00 X0.2 Y@(round(sin(45)), 4)
+N10 G00 X0.2 Y@(round(sin(45), 4))
 ```
 Which gives:
 ```gcode
