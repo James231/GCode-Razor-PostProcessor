@@ -1,6 +1,6 @@
 # G-Code Razor
 
-[G-Code](https://en.wikipedia.org/wiki/G-code) the most common language used for programming CNC machines.
+[G-Code](https://en.wikipedia.org/wiki/G-code) is the most common language used for programming CNC machines.
 
 Modern features have gradually been added to G-Code over the past few decades. Early versions of G-Code did not have support for features such as iterative loops and trigonometric functions.
 
