@@ -46,13 +46,13 @@ The biggest time saver comes when using loops. For example, the following code r
 
 ```gcode
 N10 G00 X0.2
-N10 G00 Y0.1
+N10 G00 X0.1
 N10 G00 X0.3
-N10 G00 Y0.1
+N10 G00 X0.1
 N10 G00 X0.4
-N10 G00 Y0.1
+N10 G00 X0.1
 N10 G00 X0.5
-N10 G00 Y0.1
+N10 G00 X0.1
 N10 G00 X0.6
 ```
 **Note:** The line numbers are not set correctly, but this rarely causes problems, and can be set corrected your primary G-Code editor.
@@ -62,7 +62,7 @@ But, instead of typing the code above you can enter the following into G-Code Ra
 ```
 @for(int i = 0; i < 5; i++) {
 @:N10 G00 X@(0.2+(i*0.1))
-@:N10 G00 Y0.1
+@:N10 G00 X0.1
 }
 ```
 While this may look complex, the examples page in the App explains this in detail and lets you copy snippets to change yourself. It is simpler than it looks!
