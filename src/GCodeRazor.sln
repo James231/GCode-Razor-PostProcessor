@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HL", "HL\HL.csproj", "{724C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextEditLib", "TextEditLib\TextEditLib.csproj", "{220F6F00-DCF0-4DC0-921D-691F6843D45C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCodeRazor.EngineBuilder", "GCodeRazor.Compiler\GCodeRazor.EngineBuilder.csproj", "{ABE5E18E-63EA-40CE-9A0A-65B80F052FDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{220F6F00-DCF0-4DC0-921D-691F6843D45C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{220F6F00-DCF0-4DC0-921D-691F6843D45C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{220F6F00-DCF0-4DC0-921D-691F6843D45C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABE5E18E-63EA-40CE-9A0A-65B80F052FDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE5E18E-63EA-40CE-9A0A-65B80F052FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABE5E18E-63EA-40CE-9A0A-65B80F052FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABE5E18E-63EA-40CE-9A0A-65B80F052FDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,13 +2,15 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True"
+        ui:TitleBar.ExtendViewIntoTitleBar="True"
+        ui:TitleBar.IsBackButtonVisible="False"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:avEditEx="clr-namespace:TextEditLib;assembly=TextEditLib"
         mc:Ignorable="d"
-        WindowStyle="None"
-        Title="G-Code Razor" Height="550" Width="850" 
-        StateChanged="Window_StateChanged" LocationChanged="Window_LocationChanged"
+        Title="G-Code Razor" Height="550" Width="850"
         UseLayoutRounding="True"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextOptions.TextFormattingMode="Ideal" 
@@ -16,16 +18,13 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         >
-    <WindowChrome.WindowChrome>
-        <WindowChrome CaptionHeight="0" ResizeBorderThickness="5"/>
-    </WindowChrome.WindowChrome>
     <Border Name="main" BorderThickness="0" BorderBrush="Black" Margin="0">
         <DockPanel>
             <!-- Title Bar Area -->
             <Border Name="border" DockPanel.Dock="Top" Height="32">
 
                 <Grid>
-                        <Grid Background="Black" HorizontalAlignment="Stretch" Margin="0,0,296,0" PreviewMouseDown="System_MouseDown" PreviewMouseMove="System_MouseMove">
+                        <Grid Background="Black" HorizontalAlignment="Stretch" Margin="0,0,296,0">
                             <Image VerticalAlignment="Center" Margin="7 4 7 4" HorizontalAlignment="Left" DockPanel.Dock="Left" Source="logo.png" Width="30" ></Image>
                             <TextBlock VerticalAlignment="Center" Margin="40 0 0 0" Foreground="White" FontSize="19" Text="{Binding Title, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>
                         </Grid>
@@ -59,54 +58,12 @@
                         </StackPanel.Resources>
 
                         <Grid Width="160" Background="#FF252525">
-                            <Button x:Name="SeeExampleButton" Width="160" Style="{StaticResource systemButton}" Click="SeeExamplesButtonPressed">
-                                <Label FontSize="20" x:Name="SeeExamplesLabel">See Examples</Label>
-                            </Button>
+                            <ui:TitleBarButton x:Name="SeeExampleButton" Width="160" Style="{StaticResource systemButton}" Click="SeeExamplesButtonPressed">
+                                <Label FontSize="20" x:Name="SeeExamplesLabel" FontFamily="{DynamicResource MaterialDesignFont}">See Examples</Label>
+                            </ui:TitleBarButton>
                         </Grid>
 
-                        <Button Click="Mimimize_Click" Style="{StaticResource systemButton}">
-                            <Rectangle Width="11"
-                                       Stroke="white"
-                                       StrokeThickness="1"/>
-                        </Button>
-
-                        <Button Click="Maximize_Click" Style="{StaticResource systemButton}">
-                            <Grid>
-                                <Rectangle Name="rectMax" Width="10" Height="10"
-                                       Stroke="white"
-                                       StrokeThickness="1"/>
-                                <Canvas Name="rectMin"  Visibility="Hidden" RenderOptions.EdgeMode="Aliased">
-                                    <Polyline Points="2.375,2 2.375,0.375 10.625,0.375 10.625,8.625 9,8.625"
-                                              StrokeThickness="0.75" Stroke="white" RenderOptions.EdgeMode="Aliased" RenderOptions.BitmapScalingMode="HighQuality"/>
-                                    <Rectangle Width="9" Height="9"
-                                       Stroke="white"
-                                       StrokeThickness="1" Margin="0,2,2,0" SnapsToDevicePixels="True" RenderOptions.EdgeMode="Aliased" RenderOptions.BitmapScalingMode="HighQuality" />
-                                </Canvas>
-                            </Grid>
-                        </Button>
-
-                        <Button Click="Close_Click">
-                            <Button.Style>
-                                <Style TargetType="Button" BasedOn="{StaticResource systemButton}">
-                                    <Style.Triggers>
-                                        <Trigger Property="Button.IsMouseOver" Value="True">
-                                            <Setter Property="Button.Background" Value="#E81123" />
-                                        </Trigger>
-                                    </Style.Triggers>
-                                    <Setter Property="Button.Background" Value="black" />
-                                </Style>
-                            </Button.Style>
-                            <Canvas Height="25" Width="35">
-                                <Line    
-                                    X1="12" Y1="8" 
-                                    X2="22" Y2="18"    
-                                    Stroke="white" StrokeThickness="1"/>
-                                <Line    
-                                    X1="12" Y1="18"    
-                                    X2="22" Y2="8"  
-                                    Stroke="white" StrokeThickness="1"/>
-                            </Canvas>
-                        </Button>
+                        <Grid Width="140"></Grid>
 
                     </StackPanel>
                 </Grid>

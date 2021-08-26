@@ -152,14 +152,21 @@
     <PackageReference Include="MaterialDesignThemes">
       <Version>3.1.3</Version>
     </PackageReference>
+    <PackageReference Include="ModernWpfUI">
+      <Version>0.9.4</Version>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.3</Version>
     </PackageReference>
     <PackageReference Include="RazorLight">
-      <Version>2.0.0-beta9</Version>
+      <Version>2.0.0-rc.3</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GCodeRazor.Compiler\GCodeRazor.EngineBuilder.csproj">
+      <Project>{abe5e18e-63ea-40ce-9a0a-65b80f052fda}</Project>
+      <Name>GCodeRazor.EngineBuilder</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HL\HL.csproj">
       <Project>{724c5c4d-0cb9-44bb-969c-632f6beb83de}</Project>
       <Name>HL</Name>
